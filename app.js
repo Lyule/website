@@ -19,7 +19,7 @@ app.engine('hbs', hbs.express4({
 }));
 
 app.set('view engine', 'hbs');
-app.set('views', [path.join(__dirname, 'apps/view'), path.join(__dirname, 'view')]);
+app.set('views', [path.join(__dirname, 'view'), path.join(__dirname, 'apps/view')]);
 
 require('./apps/router')(app);
 

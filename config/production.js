@@ -1,4 +1,4 @@
 module.exports = {
-    api: 'http://www.wenqiangli.club',
+    api: 'www.wenqiangli.club',
     static: '//localhost:8080'
 };
