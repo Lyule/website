@@ -29,6 +29,11 @@ try {
             new winston.transports.Console({
                 json: true,
                 colorize: true
+            }),
+            new(winston.transports.File)({
+                name: 'info-file',
+                filename: `filelog-info${new Date().getMinutes()}.log`,
+                level: 'info'
             })
         ],
         meta: true, // optional: control whether you want to log the meta data about the request (default to true)
@@ -48,6 +53,11 @@ app.use(expressWinston.errorLogger({
         new winston.transports.Console({
             json: true,
             colorize: true
+        }),
+        new(winston.transports.File)({
+            name: 'error-file',
+            filename: 'filelog-error.log',
+            level: 'error'
         })
     ]
 }));
